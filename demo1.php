@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+<p style="background-color: red;color:aliceblue"><?php echo $_GET ["Error"] password Mismatch</p>
+<p style="background-color: green;color:aliceblue "> Regristration Success!</p>
     <form action="output.php" method="POST">
 <div>
 <label for="username"> Username</label>

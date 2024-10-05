@@ -42,6 +42,13 @@ function test ($fieldname){
         echo "field is empty<br>";
     }
 }
+if ($password == $confirm_password{
+    <Header> ("Registration Success!<br>"); </Header> 
+    exit;
+    
+}else {
+    echo "field is empty<br>";
+}
 
 }
 
