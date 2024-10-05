@@ -1,55 +1,84 @@
-<?php  
+<?php
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $email = $_POST["email"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $confirm_password = $_POST ["confirm-password"];
-/*
-    if(trim($username) != ""){
-    echo "USER Email is Not Empty<br>";
-    
-}else {
-    echo "username is empty<br>";
+$username            = $_POST["username"];
+$email               = $_POST["email"];
+$password            = $_POST["password"];
+$confirm_password    = $_POST["confirm-password"];
+
+
+
+
+
+
+
+
+
+
+    //Validate
+
+    if (trim($username) != ""){
+    echo "User username is not empty<br>";
+    } else {
+    echo "Field username is empty <br>";
+    }
+
+
+    if (trim($email) != ""){
+    echo "User email is not empty<br>";
+    } else {
+    echo "Field email is empty <br>";
+    }
+
+
+    if (trim($password) != ""){
+    echo "User password is not empty<br>";
+    } else {
+    echo "Field password is empty <br>";
+    }
+
+
+    if (trim($confirm_password) != ""){
+    echo "User confirm password is not empty<br>";
+    } else {
+    echo "Field password is empty <br>";
+    }
+
+    if($password == $confirm_password){
+
+
+        header("location: demo1.php?success=REGISTRATION SUCCESSFUL");
+        exit;
+
+
+    } else {
+        header("location: demo1.php?error=PASSWORD MISMATCH");
+        exit;
+
+
+    }
+
+
 }
 
-if(trim($email) != ""){
-    echo "Email is Not Empty<br>";
-    
-}else {
-    echo "email is empty<br>";
-}
 
-if(trim($password) != ""){
-    echo "password is Not Empty<br>";
-    
-}else {
-    echo "password is empty<br>";
-}
-*/
-test($username);
-test(fieldname: $email);
+//echo "User email is ". $email. "<br>";
+// echo "User username is ". $username. "<br>";
+/*test($username);
+test($email);
 test($password);
 test($confirm_password);
-
-
-
-function test ($fieldname){
-    if(trim($fieldname) != ""){
-        echo "User Field is Not Empty<br>";
-        
-    }else {
-        echo "field is empty<br>";
-    }
-}
-if ($password == $confirm_password{
-    <Header> ("Registration Success!<br>"); </Header> 
-    exit;
-    
-}else {
-    echo "field is empty<br>";
 }
 
-}
 
+function test($fieldName){
+    if (trim($fieldName) != ""){
+        echo "User $fieldName is NOT EMPTY<br>";
+        } else {
+        echo "Field $fieldName is EMPTY<br>";
+        }
+
+
+    }*/
 ?>
